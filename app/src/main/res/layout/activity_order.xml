@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OrderActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:weightSum="1">
+
+        <!-- Order Title -->
+        <TextView
+            android:id="@+id/order_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/order_label_text"
+            android:textSize="18sp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Name -->
+        <TextView
+            android:id="@+id/name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name"
+            android:textSize="14sp"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/name_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Isi nama lengkap"
+            android:inputType="textPersonName" />
+
+        <!-- Address -->
+        <TextView
+            android:id="@+id/address_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address"
+            android:textSize="14sp"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/address_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Isi alamat sekarang"
+            android:inputType="textMultiLine" />
+
+        <!-- City -->
+        <TextView
+            android:id="@+id/city_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="City"
+            android:textSize="14sp"
+            android:layout_marginTop="16dp" />
+
+        <Spinner
+            android:id="@+id/city_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Phone -->
+        <TextView
+            android:id="@+id/phone_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phone"
+            android:textSize="14sp"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/phone_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Isi dengan nomor telepon"
+            android:inputType="phone" />
+
+        <!-- Notes -->
+        <TextView
+            android:id="@+id/note_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notes"
+            android:textSize="14sp"
+            android:layout_marginTop="16dp" />
+
+        <EditText
+            android:id="@+id/note_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tambahkan catatan pesanan anda"
+            android:inputType="textMultiLine" />
+
+        <!-- Delivery Method -->
+        <TextView
+            android:id="@+id/delivery_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Choose Delivery Method"
+            android:textSize="16sp"
+            android:layout_marginTop="24dp" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@id/note_text">
+
+            <RadioButton
+                android:id="@+id/sameday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Same day messenger service" />
+
+            <RadioButton
+                android:id="@+id/nextday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Next day ground delivery" />
+
+            <RadioButton
+                android:id="@+id/pickup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pick up" />
+        </RadioGroup>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
